@@ -1,0 +1,5 @@
+{% for u in mysql_users %}
+CREATE USER '{{ u.name }}'@'{{ u.host }}' IDENTIFIED BY '{{ u.password }}';
+GRANT {{ u.priv }} ON *.* TO '{{ u.name }}'@'{{ u.host }}';
+FLUSH PRIVILEGES;
+{% endfor %}

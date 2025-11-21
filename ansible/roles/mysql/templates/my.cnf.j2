@@ -1,0 +1,8 @@
+[mysqld]
+bind-address     = {{ mysql_bind_address }}
+max_connections  = {{ mysql_server_config.max_connections }}
+innodb_buffer_pool_size = {{ mysql_server_config.innodb_buffer_pool_size }}
+innodb_log_file_size    = {{ mysql_server_config.innodb_log_file_size }}
+sql_mode               = {{ mysql_server_config.sql_mode }}
+log_bin                = {{ mysql_server_config.log_bin }}
+server_id              = {{ mysql_server_config.server_id }}

@@ -1,0 +1,5 @@
+- name: Deploy custom MySQL configuration
+  template:
+    src: my.cnf.j2
+    dest: /etc/mysql/mysql.conf.d/99-custom.cnf
+  notify: restart mysql

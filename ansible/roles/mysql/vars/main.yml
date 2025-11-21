@@ -1,0 +1,20 @@
+mysql_root_password: "StrongRootPassword!"
+mysql_bind_address: "0.0.0.0"
+
+mysql_server_config:
+  max_connections: 200
+  innodb_buffer_pool_size: "512M"
+  innodb_log_file_size: "128M"
+  sql_mode: "STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION"
+  log_bin: "/var/log/mysql/mysql-bin.log"
+  server_id: 1
+
+mysql_users:
+  - name: "app_user"
+    host: "%"
+    password: "AppUser123!"
+    priv: "appdb.*:ALL"
+  - name: "readonly_user"
+    host: "%"
+    password: "ReadOnly123!"
+    priv: "appdb.*:SELECT"
