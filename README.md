@@ -1,4 +1,4 @@
-# MySQL Administration Lab — Module 1: Automated MySQL Deployment
+#Automated MySQL Deployment
 
 A practical MySQL administration project that demonstrates real-world DBA and Linux automation skills.  
 This module focuses on **fully automated installation, configuration, and user management of MySQL 8** using Ansible.
